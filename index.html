@@ -13,235 +13,274 @@
 
 	<header class="caption">
 		<h1>.SEC: основы веб-программирования.</h1>
-		<h2>PHP. Вводное занятие.</h2>
+		<h2>SQL</h2>
 	</header>
 
 	<section class="slide">
-		<h2>Что есть в вебе?</h2>
-		<h3 class="next">Frontend — браузер</h3>
-		<ul>
-			<li class="next">HTML</li>
-			<li class="next">CSS</li>
-			<li class="next">JS</li>
-		</ul>
-		<h3 class="next">Backend — сервер</h3>
-		<ul>
-			<li class="next">PHP</li>
-			<li class="next">...and more</li>
-			<li class="next">SQL</li>
-			<li class="next">...and more</li>
-		</ul>
-		<h3 class="next" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)">AJAX</h3>
+		<h2>База данных</h2>
+		<p>
+			База данных — совокупность самостоятельных материалов, систематизированных таким образом, чтобы эти материалы могли быть найдены и обработаны с помощью ЭВМ.
+		</p>
 	</section>
 
 	<section class="slide">
-		<h2>Backend — логика</h2>
+		<h2>Классификация по модели данных</h2>
 		<ul>
-			<li class="next">PHP</li>
-			<li class="next">JS (Node.js)</li>
-			<li class="next">Java</li>
-			<li class="next">Python</li>
-			<li class="next">Ruby</li>
-			<li class="next">Perl</li>
+			<li>Иерархическая</li>
+			<li>Объектная и объектно-ориентированная</li>
+			<li>Объектно-реляционная</li>
+			<li>Реляционная</li>
+			<li>Сетевая</li>
+			<li>Функциональная</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Как работают статичные сайты</h2>
-		<div class="sheme sheme-basic">
-			<div class="sheme__line sheme__line--top">
-				<div>Браузер</div>
-				<div></div>
-				<div>Сервер</div>
-			</div>
-			<div class="sheme__line">
-				<div class="next"><span class="sheme__point"></span></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div class="sheme__arrow next">/home.html</div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div></div>
-				<div class="next"><span class="sheme__point"></span></div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div class="sheme__arrow sheme__arrow--back next">[text]</div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div class="next"><span class="sheme__point"></span></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div class="next">&lt;html parsing...&gt;</div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div class="next"><i>img.jpg</i></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div class="next"><span class="sheme__point"></span></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div class="sheme__arrow next">/img.jpg</div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div></div>
-				<div class="next"><span class="sheme__point"></span></div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div class="sheme__arrow sheme__arrow--back next">[bin]</div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div class="next"><span class="sheme__point"></span></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div class="next">&lt;html parsing...&gt;</div>
-				<div></div>
-				<div></div>
-			</div>
-		</div>
+		<h2>Реляционная БД</h2>
+		<p>Или таблично-ориентированная БД</p>
+		<p class="next">Любые данные из реляционной БД могут быть представлены в виде таблицы.</p>
+		<p class="next">Каждая запись в таблице имеет идентификатор (id).</p>
 	</section>
 
 	<section class="slide">
-		<h2>Как работают динамичные сайты</h2>
-		<div class="sheme sheme-basic">
-			<div class="sheme__line sheme__line--top">
-				<div>Браузер</div>
-				<div></div>
-				<div>Сервер</div>
-			</div>
-			<div class="sheme__line">
-				<div class="next"><span class="sheme__point"></span></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div class="sheme__arrow next">/home.<b>php</b></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div></div>
-				<div class="sheme__arrow sheme__arrow--right-only next"><span class="sheme__point"></span>&nbsp;</div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div></div>
-				<div class="next" style="transform:translateX(50%);font-weight: bold; text-align: center;">
-					<span style="">php.exe<br><i>home.php</i></span>
-				</div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div></div>
-				<div class="sheme__arrow sheme__arrow--back sheme__arrow--right-only next"><span class="sheme__point"></span>&nbsp;</div>
-			</div>
-			<div class="sheme__line">
-				<div></div>
-				<div class="sheme__arrow sheme__arrow--back next">[text]</div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div class="next"><span class="sheme__point"></span></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="sheme__line">
-				<div class="next">&lt;html parsing...&gt;</div>
-				<div></div>
-				<div></div>
-			</div>
-		</div>
+		<h2>SQL</h2>
+		<p>Structured query language, или</p>
+		<p>язык структурированных запросов</p>
+		<p class="next">Язык программирования, применяемый для создания, модификации и управления данными в реляционной базе данных, управляемой соответствующей системой управления базами данных.</p>
 	</section>
 
-	<style>
-		.sheme {
-		}
-		.sheme__line {
-			display: flex;
-			min-height: 40px;
-			line-height: 1.3;
-			position: relative;			
-		}
-		.sheme__line--top {
-			font-family: monospace;
-			font-size: 0.7em;
-		}
-		.sheme__line > * {
-			width: 33%;
-			text-align: center;
-			position: relative;
-		}
-		.sheme__point {
-			    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-		}
-		.sheme__point::before {
-			content: '';
-			display: block;
-			width: 10px;
-			height: 10px;
-			background-color: #000;
-			border-radius: 50%;
-		}
-		.sheme__arrow {
-			position: relative;
-			overflow: hidden;
-			text-shadow: 0 0 2px #fff;
-		}
-		.sheme__arrow::after {
-			content: '';
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translate(0, -50%);
-			border: 10px solid transparent;
-			border-right-width: 0;
-			border-left-color: black;
-		}
-		.sheme__arrow::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 50%;
-			transform: translate(0, -50%);
-			border: 10px solid transparent;
-			border-right-width: 0;
-			border-left-color: black;
-		}
-		.sheme__arrow--back::before, .sheme__arrow--back::after {
-			transform: translate(0, -50%) scale(-1, 1);
-		}
-		.sheme__arrow--right-only::before {
-			content: none;
-		}
-	</style>
+	<section class="slide">
+		<h2>СУБД</h2>
+		<p>Система управления базами данных.</p>
+		<ul>
+		<li class="next">MySQL</li>
+		<li class="next">Microsoft SQL Server</li>
+		<li class="next">Oracle Database</li>
+		<li class="next">PostgreSQL</li>
+		<li class="next">...</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Объекты баз данных</h2>
+		<ul>
+			<li class="next">база данных</li>
+			<li class="next">таблица</li>
+			<li class="next">представление</li>
+			<li class="next">пользователь</li>
+			<li class="next">...</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>...</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Отношения (связи) в базах данных</h2>
+		<p>Сущности удобно связывать по ID — уникальному числовому идентификатору.</p>
+		<p class="next">Отношения:</p>
+		<ul>
+			<li class="next">Один к одному <i class="next">(зачем?)</i></li>
+			<li class="next">Один ко многим</li>
+			<li class="next">Многие ко многим</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>...</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Практическая работа с MySQL</h2>
+		<p class="next">MySQL также есть в Open Server.</p>
+		<p class="next">MySQL запускается одновременно с сервером (например, Apache), они работают в паре.</p>
+		<p class="next">Для работы с сайтом обычно требуется дамп БД.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Дамп БД</h2>
+		<p>"Слепок" базы данных сайта на определённый момент времени.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Работа с MySQL</h2>
+		<ul>
+			<li class="next">Консоль (нативно)</li>
+			<li class="next">Менеджер в PhpMyAdmin</li>
+			<li class="next">Менеджер HeidiSQL</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Ручное заполнение данных + primary key</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Экспорт и импорт дампа БД<br> через HeidiSQL</h2>
+	</section>
+
+	<section class="slide">
+		<h2>...</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Операторы SQL</h2>
+		<ul>
+			<li class="next"><b>DDL</b> — Data Definition Language (операторы определения данных)</li>
+			<li class="next"><b>DML</b> — Data Manipulation Language (операторы манипуляции данными)</li>
+			<li class="next">DCL — Data Control Language (операторы определения доступа к данным)</li>
+			<li class="next"><i>TCL</i> — Transaction Control Language (операторы управления транзакциями)</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>DML</h2>
+		<p>Data Manipulation Language (операторы манипуляции данными)</p>
+		<ul id="dml">
+			<li><label><input type="checkbox"><span>SELECT</span></label></li>
+			<li><label><input type="checkbox"><span>INSERT</span></label></li>
+			<li><label><input type="checkbox"><span>UPDATE</span></label></li>
+			<li><label><input type="checkbox"><span>DELETE</span></label></li>
+		</ul>
+		<style>
+			#dml {
+				display: grid;grid-template-columns: 1fr 1fr;grid-template-rows: 1fr 1fr;height: 38vh;align-items: center;text-align: center;font-size: 3em;
+			}
+			#dml input, #dml span {
+				display: none;
+			}
+			#dml li {
+				position: relative;
+			}
+			#dml label {
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+			}
+			#dml input:checked + span {
+				display: block;
+				text-shadow: 0 0 11px white;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>INSERT</h2>
+		<p>Позволяет добавлять новые записи в таблицу</p>
+		<code>INSERT INTO <i>&lt;таблица&gt;</i> (<i>&lt;колонка1&gt;</i>, <i>&lt;колонка2&gt;</i>) VALUES (<i>&lt;значение1&gt;</i>, <i>&lt;зачение2&gt;</i>);</code>
+		<p></p>
+		<p class="next">Есть и другие варианты синтаксиса, могут зависеть от СУБД.</p>
+		<p class="next">Не все поля обязательны.</p>
+		<p class="next">Строчные приняты, но не обязательны.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Форматирование</h2>
+		<p><b>Важно!</b></p>
+<pre>
+<code>INSERT</code>
+<code>INTO <i>&lt;таблица&gt;</i> (<i>&lt;колонка1&gt;</i>, <i>&lt;колонка2&gt;</i>)</code>
+<code>VALUES (<i>&lt;значение1&gt;</i>, <i>&lt;зачение2&gt;</i>) <mark>;</mark></code>
+</pre>
+<br>
+<pre class="next">
+<code>INSERT</code>
+<code>INTO users (firstname, lastname, age)</code>
+<code>VALUES ('Сергей', 'Козлов', 24);</code>
+</pre>
+	</section>
+
+	<section class="slide">
+		<h2>INSERT</h2>
+		<p>Позволяет изменять записи в таблице</p>
+<pre>
+<code>UPDATE <mark>[top(x)]</mark> <i>&lt;объект&gt;</i></code>
+<code>SET <i><mark>&lt;присваивание1&gt;</mark> [, присваивание2, ...]</i></code>
+<code>[<mark>WHERE</mark> <i>&lt;условие&gt;</i>];</code>
+</pre>
+<p class="next">Пример:</p>
+<pre class="next">
+<code>UPDATE tbl_books</code>
+<code>SET price = 0</code>
+<code>WHERE quantity = 0;</code>
+</pre>
+	</section>
+
+	<section class="slide">
+		<h2>DELETE</h2>
+		<p>Позволяет удалять записи из таблицы</p>
+<pre>
+<code>DELETE</code>
+<code>FROM <i>&lt;таблица&gt;</i></code>
+<code><mark>WHERE</mark> <i>&lt;условие&gt;</i>;</code>
+</pre>
+<p class="next">Пример:</p>
+<pre class="next">
+<code>DELETE</code>
+<code>FROM users</code>
+<code>WHERE age &lt; 18 <mark>OR</mark> firstname <mark>IS NULL</mark>;</code>
+</pre>
+	</section>
+
+	<section class="slide">
+		<h2>SELECT</h2>
+		<p>Позволяет получить проекцию из таблиц</p>
+<pre class="next">
+<code>SELECT <mark>*</mark> FROM users;</code>
+</pre>
+<pre class="next">
+<code>SELECT login FROM users;</code>
+</pre>
+<pre class="next">
+<code>SELECT firstname, lastname FROM users;</code>
+</pre>
+<pre class="next">
+<code>SELECT login FROM users WHERE age IS NULL;</code>
+</pre>
+<pre class="next">
+<code>SELECT * FROM users ORDER BY date_register DESC;</code>
+</pre>
+<pre class="next">
+<code>SELECT * FROM users <mark>LIMIT 60, 30</mark>;</code>
+</pre>
+	</section>
+
+	<section class="slide">
+		<h2>DDL</h2>
+		<p>Data Definition Language (операторы определения данных)</p>
+		<p class="next">Позволяет разрешать или запрещать выполнять те или иные операции пользователям.</p>
+		<ul>
+			<li class="next">CREATE — создает объект БД</li>
+			<li class="next">ALTER — изменяет объект</li>
+			<li class="next">DROP — удаляет объект</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>DCL</h2>
+		<p>Data Control Language (операторы определения доступа к данным)</p>
+		<p class="next">Позволяет разрешать или запрещать выполнять те или иные операции пользователям.</p>
+		<ul>
+			<li class="next">GRANT — предоставляет пользователю (группе) разрешения на определенные операции с объектом</li>
+			<li class="next">REVOKE — отзывает ранее выданные разрешения</li>
+			<li class="next">DENY — задает запрет, имеющий приоритет над разрешением</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>...</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Если не хватило — немного структуры проекта</h2>
+	</section>
+
+	<section class="slide">
+		<h2>ДЗ: постраничная навигация по get-параметру</h2>
+	</section>
 
 	<div class="progress"></div>
 
